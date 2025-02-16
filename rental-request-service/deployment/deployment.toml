@@ -18,6 +18,11 @@ password = "wso2carbon"
 alias = "symmetric.key.value"
 algorithm = "AES"
 
+[custom_properties]
+db.url = "$env{DB_URL}"
+db.user = "$env{DB_USER}"
+db.password = "$env{DB_PASSWORD}"
+
 ## Following are set of example configs. Please refer docs for complete set of configurations.
 
 # [transport.http]
