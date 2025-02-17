@@ -12,11 +12,11 @@
                     <property name="rental_duration_days" expression="json-eval($.rental_duration_days)" scope="default" type="STRING"/>
                     <property name="payment_method" expression="json-eval($.payment_method)" scope="default" type="STRING"/>
 
-                    <!-- Insert data into MySQL database -->
+                    <!-- Insert data into PostgreSQL database -->
                     <dbreport>
                         <connection>
                             <pool>
-                                <driver>com.mysql.jdbc.Driver</driver>
+                                <driver>org.postgresql.Driver</driver>
                                 <url>{get-property('conf:db.url')}</url>
                                 <user>{get-property('conf:db.user')}</user>
                                 <password>{get-property('conf:db.password')}</password>
